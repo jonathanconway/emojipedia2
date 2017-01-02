@@ -1,9 +1,6 @@
-# Emojipedia²
+# 📕 Emojipedia²
 
 A faster, snapper way of finding the right emoji.
-
-⌨<br />
-👆
 
 ## Credits
 
