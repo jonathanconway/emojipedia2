@@ -1,0 +1,48 @@
+.Emoji {
+  width: 18%;
+  background-color: #efefef;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  height: 100px;
+  margin: 1%;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.Emoji:hover,
+.Emoji:active {
+  background-color: silver;
+}
+
+.Emoji-copying {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  font-size: 7.5em;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  animation-name: fadeOut;
+  animation-duration: 1s;
+}
+
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+.Emoji-emoji {
+  font-size: 2.5em;
+}
+
+.Emoji-description {
+  margin: 5px;
+  font-size: 1.3em;
+}

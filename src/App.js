@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+
 import './App.css';
 import emojis from './emojis.js';
+import Emoji from './Emoji';
 
 class App extends Component {
   constructor(props) {
@@ -28,7 +30,7 @@ class App extends Component {
         </div>
         <div className="App-body">
           <form className="App-search">
-            <label className="App-search-label" htmlFor="search">{searchLabelText}</label>
+            <label className="hidden" htmlFor="search">{searchLabelText}</label>
             <input
               className="App-search-input"
               id="search"
@@ -38,12 +40,11 @@ class App extends Component {
             />
           </form>
           <div className="App-search-results">
-            {emojis.filter(this.filterBySearchText.bind(this)).map((e) =>
-              <div className="Emoji" key={e.emoji}>
-                <span className="Emoji-emoji">{e.emoji}</span>
-                <p className="Emoji-description">{e.description}</p>
-              </div>
-            )}
+            {
+              emojis
+                .filter(this.filterBySearchText.bind(this))
+                .map(e => <Emoji {...e} />)
+            }
           </div>
         </div>
       </div>
