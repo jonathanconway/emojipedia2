@@ -1,6 +1,6 @@
 # 📕 Emojipedia²
 
-A faster, snapper way to grab the right emoji.
+A faster, snappier way to grab the right emoji.
 
 ## Credits
 
