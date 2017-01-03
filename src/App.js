@@ -40,6 +40,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h2><img className="App-logo" src={logoSvg} alt="" /> Emojipedia²</h2>
+          <em className="App-motto">A faster way to snatch 'n' grab emojis!</em>
         </div>
         <div className="App-body">
           <form className="App-search">

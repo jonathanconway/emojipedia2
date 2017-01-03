@@ -42,6 +42,12 @@
   }
 }
 
+.App-motto {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: -10px;
+}
+
 .App-search {
   margin: 1%;
   margin-top: 30px;
