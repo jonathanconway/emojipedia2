@@ -2,7 +2,7 @@
 
 A faster, snappier way to grab the right emoji.
 
-![Screencast of user searching for 'cat' and copying an emoji to the clipboard using Emojipedia2](http://imgur.com/a/uJ8e4)
+![Screencast of user searching for 'cat' and copying an emoji to the clipboard using Emojipedia2](http://i.imgur.com/pTzwJoz.gifv)
 
 ## Credits
 
