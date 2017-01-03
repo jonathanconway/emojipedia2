@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import './App.css';
-import emojis from './emojis.js';
 import Emoji from './Emoji';
 
 class App extends Component {
+  static propTypes = {
+    emojis: PropTypes.array.isRequired,
+    maxNumberVisible: PropTypes.number.isRequired
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +21,15 @@ class App extends Component {
   }
 
   filterBySearchText(emoji) {
-    return emoji.description.toLowerCase().indexOf(this.state.searchText.toLowerCase()) > -1;
+    const { searchText } = this.state;
+    return searchText && emoji.description.toLowerCase().indexOf(searchText.toLowerCase()) > -1;
+  }
+
+  get searchResults() {
+    return this.props.emojis
+      .filter(this.filterBySearchText.bind(this))
+      .slice(0, this.props.maxNumberVisible)
+      .map((e, i) => <Emoji {...e} key={i} />)
   }
 
   render() {
@@ -40,11 +52,7 @@ class App extends Component {
             />
           </form>
           <div className="App-search-results">
-            {
-              emojis
-                .filter(this.filterBySearchText.bind(this))
-                .map(e => <Emoji {...e} />)
-            }
+            { this.searchResults }
           </div>
         </div>
       </div>
