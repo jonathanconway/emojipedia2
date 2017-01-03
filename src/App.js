@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 import './App.css';
+import logoSvg from './logo.svg';
 import Emoji from './Emoji';
 
 class App extends Component {
@@ -38,7 +39,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Emojipedia²</h2>
+          <h2><img className="App-logo" src={logoSvg} alt="" /> Emojipedia²</h2>
         </div>
         <div className="App-body">
           <form className="App-search">
