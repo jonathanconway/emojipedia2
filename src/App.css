@@ -8,14 +8,38 @@
   color: white;
 }
 
+@media only screen and (max-device-width: 480px) {
+  .App-header {
+    padding: 1px;
+  }
+}
+
 .App-body {
   width: 80%;
   display: inline-block;
 }
 
+@media only screen and (max-device-width: 480px) {
+  .App-body {
+    width: 95%;
+  }
+}
+
 .App-search {
   margin: 1%;
   margin-top: 30px;
+}
+
+.App-search-results {
+  text-align: left;
+  margin-top: 20px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .App-search,
+  .App-search-results {
+    margin-top: 10px;
+  }
 }
 
 .App-search-input {
@@ -30,7 +54,8 @@
   border-radius: 8px;
 }
 
-.App-search-results {
-  text-align: left;
-  margin-top: 20px;
+@media only screen and (max-device-width: 480px) {
+  .App-search-input {
+    font-size: 1.2em;
+  }
 }

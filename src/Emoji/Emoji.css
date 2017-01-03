@@ -13,6 +13,13 @@
   cursor: pointer;
 }
 
+@media only screen and (max-device-width: 480px) {
+  .Emoji {
+    width: 31%;
+    height: 150px;
+  }
+}
+
 .Emoji:hover,
 .Emoji:active {
   background-color: silver;
