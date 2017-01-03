@@ -56,6 +56,10 @@ class App extends Component {
             { this.searchResults }
           </div>
         </div>
+        <div className="App-footer">
+          <span>(ɔ) Copyleft, Jonathan Conway, 2016</span><span>&nbsp;|&nbsp;</span>
+          <a href="https://github.com/jonathanconway/emojipedia2">Source on GitHub</a>
+        </div>
       </div>
     );
   }

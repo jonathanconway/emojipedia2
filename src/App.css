@@ -7,9 +7,14 @@
   vertical-align: top;
 }
 
-.App-header {
+.App-header,
+.App-footer {
   background-color: #222;
   padding: 20px;
+}
+
+.App-header *,
+.App-footer * {
   color: white;
 }
 
@@ -17,6 +22,13 @@
   .App-header {
     padding: 1px;
   }
+}
+
+.App-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
 }
 
 .App-body {
