@@ -51,6 +51,7 @@ class App extends Component {
               type="search"
               placeholder={searchLabelText}
               onChange={this.onChangeSearchText.bind(this)}
+              autoFocus
             />
           </form>
           <div className="App-search-results">
