@@ -17,6 +17,10 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    this.refs.search.focus();
+  }
+
   onChangeSearchText(e) {
     this.setState({ searchText: e.target.value });
   }
@@ -49,9 +53,9 @@ class App extends Component {
               className="App-search-input"
               id="search"
               type="search"
+              ref="search"
               placeholder={searchLabelText}
               onChange={this.onChangeSearchText.bind(this)}
-              autoFocus
             />
           </form>
           <div className="App-search-results">
