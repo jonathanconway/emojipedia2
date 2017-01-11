@@ -19,6 +19,11 @@ class App extends Component {
 
   componentDidMount() {
     this.refs.search.focus();
+
+    const keywords = window.location.hash.split('keywords=')[1];
+    if (keywords) {
+      this.setState({ searchText: keywords });
+    }
   }
 
   onChangeSearchText(e) {
@@ -55,6 +60,7 @@ class App extends Component {
               type="search"
               ref="search"
               placeholder={searchLabelText}
+              value={this.state.searchText}
               onChange={this.onChangeSearchText.bind(this)}
             />
           </form>
