@@ -16,7 +16,12 @@ class Emoji extends Component {
   }
 
   onClick(e) {
-    this.refs.input.select();
+    const input = this.refs.input;
+
+    input.select();
+    input.selectionStart=0;
+    input.selectionEnd = input.value.length;
+
     document.execCommand('copy');
 
     this.setState({ copying: true });
