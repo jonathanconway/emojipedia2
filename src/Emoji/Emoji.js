@@ -19,7 +19,7 @@ class Emoji extends Component {
     const input = this.refs.input;
 
     input.select();
-    input.selectionStart=0;
+    input.selectionStart = 0;
     input.selectionEnd = input.value.length;
 
     document.execCommand('copy');

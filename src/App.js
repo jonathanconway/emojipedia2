@@ -42,6 +42,13 @@ class App extends Component {
       .map((e, i) => <Emoji {...e} key={i} />)
   }
 
+  onFocusSearchText(e) {
+    const input = e.target;
+    input.select();
+    input.selectionStart = 0;
+    input.selectionEnd = input.value.length;
+  }
+
   render() {
     const searchLabelText = 'Search for Emojis by keyword';
 
@@ -62,6 +69,7 @@ class App extends Component {
               placeholder={searchLabelText}
               value={this.state.searchText}
               onChange={this.onChangeSearchText.bind(this)}
+              onFocus={this.onFocusSearchText.bind(this)}
             />
           </form>
           <div className="App-search-results">
