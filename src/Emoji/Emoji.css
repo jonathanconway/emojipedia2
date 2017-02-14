@@ -1,13 +1,13 @@
 .Emoji {
   width: 18%;
-  background-color: #efefef;
+  border: solid 1px #efefef;
   border-radius: 8px;
+  background-color: transparent;
   display: inline-block;
   text-align: center;
   vertical-align: top;
   height: 100px;
   margin: 1%;
-  border: none;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -22,7 +22,7 @@
 
 .Emoji:hover,
 .Emoji:active {
-  background-color: silver;
+  border: solid 1px #ed4c5c;
 }
 
 .Emoji-copying {
@@ -33,7 +33,7 @@
   left: 0;
   top: 0;
   font-size: 7.5em;
-  background-color: #333;
+  background-color: #ed4c5c;
   color: white;
   border-radius: 8px;
   animation-name: fadeOut;

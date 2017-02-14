@@ -1,24 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200');
+
+
+/* Body */
+
+body {
+  background-color: #fafafa;
+}
+
+body, input {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
 .App {
   text-align: center;
-
-  /* In case viewport height is small enough to necessitate vertical scroll */
-  padding-bottom: 50px;
 }
 
-.App-logo {
-  width: 30px;
-  vertical-align: top;
+
+/* Header */
+
+.App-header {
+  /*background-color: #f3f3f3;*/
+  color: gray;
+  margin-top: 1em;
 }
 
-.App-header,
-.App-footer {
-  background-color: #222;
-  padding: 20px;
-}
+@import url('https://fonts.googleapis.com/css?family=Baloo+Tamma');
 
-.App-header *,
-.App-footer * {
-  color: white;
+.App-header {
+  font-family: 'Baloo Tamma', cursive;
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -27,12 +36,28 @@
   }
 }
 
-.App-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 10px;
+/* Title */
+
+.App-title {
+  font-size: 1.5em;
+  font-weight: normal;
+  height: 1.5em;
+  display: inline-block;
+  margin: 0;
+  color: silver;
 }
+
+/* Logo */
+
+.App-logo {
+  width: 25px;
+  vertical-align: top;
+  padding-top: 0.3em;
+  padding-right: 0.5em;
+  display: inline-block;
+}
+
+/* Body */
 
 .App-body {
   width: 80%;
@@ -52,8 +77,7 @@
 }
 
 .App-search {
-  margin: 1%;
-  margin-top: 30px;
+  margin-top: 1em;
 }
 
 .App-search-results {
@@ -65,23 +89,62 @@
   .App-search,
   .App-search-results {
     margin-top: 10px;
+    text-align: center;
   }
 }
 
 .App-search-input {
   height: 2em;
-  width: 100%;
+  width: 11em;
   padding: 10px;
   padding-left: 15px;
-  font-size: 1.5em;
+  font-size: 1em;
   box-sizing: border-box;
   -webkit-appearance: none;
-  border: 2px solid #ccc;
+  border: 1px solid #ededed;
   border-radius: 8px;
+}
+
+.App-search-input:focus {
+  outline: none;
+  border-color: #ed4c5c;
 }
 
 @media only screen and (max-device-width: 480px) {
   .App-search-input {
-    font-size: 1.1em;
+    font-size: 1.5em;
+    width: 97%;
   }
+}
+
+/* Footer */
+
+.App-footer {
+  width: 100%;
+  padding: 2em 0;
+  font-size: 0.8em;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .App-footer {
+    padding: 0.5em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8em;
+    background-color: #fafafa;
+    border-top: solid 1px #ededed;
+  }
+}
+
+
+.App-footer * {
+  color: silver;
+}
+
+/* Copyleft symbol */
+
+.Copyleft {
+  transform: scale(-1, 1);
+  display: inline-block;
 }

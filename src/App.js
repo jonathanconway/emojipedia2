@@ -50,23 +50,24 @@ class App extends Component {
   }
 
   render() {
-    const searchLabelText = 'Search for Emojis by keyword';
-
     return (
       <div className="App">
-        <div className="App-header">
-          <h2><img className="App-logo" src={logoSvg} alt="" /> Emojipedia²</h2>
-          <em className="App-motto">A faster way to snatch 'n' grab emojis!</em>
-        </div>
+        <header className="App-header">
+          <img className="App-logo" src={logoSvg} alt="" />
+          <h2 className="App-title">Emojipedia²</h2>
+        </header>
         <div className="App-body">
           <form className="App-search">
-            <label className="hidden" htmlFor="search">{searchLabelText}</label>
+            <label className="hidden" htmlFor="search">Search for emojis</label>
             <input
               className="App-search-input"
               id="search"
               type="search"
               ref="search"
-              placeholder={searchLabelText}
+              autoFocus
+              autocapitalize="off"
+              autocomplete="off"
+              autocorrect="off"
               value={this.state.searchText}
               onChange={this.onChangeSearchText.bind(this)}
               onFocus={this.onFocusSearchText.bind(this)}
@@ -76,10 +77,10 @@ class App extends Component {
             { this.searchResults }
           </div>
         </div>
-        <div className="App-footer">
-          <span>(ɔ) Copyleft, Jonathan Conway, 2016</span><span>&nbsp;|&nbsp;</span>
+        <footer className="App-footer">
+          <span><span className="Copyleft" title="Copyleft">&copy;</span> Jonathan Conway, 2016</span><span>&nbsp;|&nbsp;</span>
           <a href="https://github.com/jonathanconway/emojipedia2">Source on GitHub</a>
-        </div>
+        </footer>
       </div>
     );
   }
