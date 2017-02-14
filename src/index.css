@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200');
+
+body, input {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
 body {
+  background-color: #fafafa;
   margin: 0;
-  padding: 0;
   font-family: sans-serif;
 }
+
+/* Utils */
 
 .hidden {
   position: absolute;

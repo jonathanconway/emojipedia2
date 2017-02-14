@@ -1,0 +1,11 @@
+.search-results {
+  text-align: left;
+  margin-top: 20px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .search-results {
+    margin-top: 10px;
+    text-align: center;
+  }
+}

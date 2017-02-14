@@ -1,0 +1,27 @@
+.searchbox {
+  margin: 1em 0;
+}
+
+.searchbox-input {
+  height: 2em;
+  width: 11em;
+  padding: 10px;
+  padding-left: 15px;
+  font-size: 1em;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border: 1px solid #ededed;
+  border-radius: 8px;
+}
+
+.searchbox-input:focus {
+  outline: none;
+  border-color: #ed4c5c;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .searchbox-input {
+    font-size: 1.5em;
+    width: 97%;
+  }
+}

@@ -1,0 +1,34 @@
+.footer {
+  width: 100%;
+  padding: 2em 0;
+  font-size: 0.8em;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .footer {
+    padding: 0.5em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8em;
+    background-color: #fafafa;
+    border-top: solid 1px #ededed;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  body {
+    padding-bottom: 3em;
+  }
+}
+
+.footer * {
+  color: silver;
+}
+
+/* Copyleft symbol */
+
+.footer .Copyleft {
+  transform: scale(-1, 1);
+  display: inline-block;
+}
