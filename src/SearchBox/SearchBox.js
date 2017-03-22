@@ -7,10 +7,6 @@ class SearchBox extends Component {
     onChangeSearchText: PropTypes.func.isRequired
   }
 
-  componentDidMount() {
-    this.refs.search.focus();
-  }
-
   onChangeSearchText(e) {
     this.props.onChangeSearchText(e.target.value);
   }
@@ -32,9 +28,9 @@ class SearchBox extends Component {
         type="search"
         ref="search"
         autoFocus
-        autocapitalize="off"
-        autocomplete="off"
-        autocorrect="off"
+        autoCapitalize="off"
+        autoComplete="off"
+        autoCorrect="off"
         value={this.props.searchText}
         onChange={this.onChangeSearchText.bind(this)}
         onFocus={this.onFocusSearchText.bind(this)}
