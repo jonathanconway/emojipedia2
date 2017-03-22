@@ -5,7 +5,8 @@ import './Emoji.css';
 class Emoji extends Component {
   static propTypes = {
     emoji: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired
+    description: PropTypes.string.isRequired,
+    keywords: PropTypes.string.isRequired
   };
 
   constructor(props) {
@@ -28,10 +29,14 @@ class Emoji extends Component {
     setTimeout(() => this.setState({ copying: false }), 1000);
   }
 
+  get hoverText() {
+    return this.props.keywords && `Also: ${this.props.keywords.join(', ')}`;
+  }
+
   render() {
     const { emoji, description } = this.props;
     return (
-      <button className="Emoji" onClick={this.onClick.bind(this)}>
+      <button className="Emoji" onClick={this.onClick.bind(this)} title={this.hoverText}>
         {this.state.copying && <span className="Emoji-copying">✂</span>}
         <span className="Emoji-emoji">{emoji}</span>
         <p className="Emoji-description">{description}</p>

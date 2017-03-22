@@ -12,8 +12,10 @@ class SearchResults extends Component {
   };
 
   filterBySearchText(emoji) {
-    const { searchText } = this.props;
-    return searchText && emoji.description.toLowerCase().indexOf(searchText.toLowerCase()) > -1;
+    const searchText = this.props.searchText.toLowerCase();
+    return searchText && (
+      (emoji.description.toLowerCase().indexOf(searchText) > -1) ||
+      (emoji.keywords && emoji.keywords.filter(keyword => keyword.indexOf(searchText) > -1).length > 0));
   }
 
   render() {
@@ -22,7 +24,7 @@ class SearchResults extends Component {
         { this.props.emojis
           .filter(this.filterBySearchText.bind(this))
           .slice(0, this.props.maxNumberVisible)
-          .map((e, i) => <Emoji {...e} key={i} />) }
+          .map((emoji, index) => <Emoji {...emoji} key={index} />) }
       </div>
     );
   }

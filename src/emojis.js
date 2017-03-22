@@ -540,7 +540,7 @@ const emojis = [
   { category: 'food', emoji: '🍯', description: 'Honey Pot' },
   { category: 'food', emoji: '🍼', description: 'Baby Bottle' },
   { category: 'food', emoji: '🥛', description: 'Glass of Milk' },
-  { category: 'food', emoji: '☕', description: 'Hot Beverage' },
+  { category: 'food', emoji: '☕', description: 'Hot Beverage', keywords: ['coffee', 'tea'] },
   { category: 'food', emoji: '🍵', description: 'Teacup Without Handle' },
   { category: 'food', emoji: '🍶', description: 'Sake Bottle and Cup' },
   { category: 'food', emoji: '🍾', description: 'Bottle With Popping Cork' },
