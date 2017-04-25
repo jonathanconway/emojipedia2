@@ -23,17 +23,18 @@ class SearchBox extends Component {
       <form className="searchbox">
         <label className="hidden" htmlFor="search">Search for emojis</label>
         <input
-        className="searchbox-input"
-        id="search"
-        type="search"
-        ref="search"
-        autoFocus
-        autoCapitalize="off"
-        autoComplete="off"
-        autoCorrect="off"
-        value={this.props.searchText}
-        onChange={this.onChangeSearchText.bind(this)}
-        onFocus={this.onFocusSearchText.bind(this)}
+          className="searchbox-input"
+          id="search"
+          type="search"
+          ref="search"
+          autoFocus
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          value={this.props.searchText}
+          onChange={this.onChangeSearchText.bind(this)}
+          onFocus={this.onFocusSearchText.bind(this)}
+          placeholder="Search for emojis"
         />
       </form>
     );
