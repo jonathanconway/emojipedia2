@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -9,11 +9,6 @@ import emojis from './emojis';
 import './App.css';
 
 class App extends Component {
-  static propTypes = {
-    emojis: PropTypes.array.isRequired,
-    maxNumberVisible: PropTypes.number.isRequired
-  };
-
   constructor(props) {
     super(props);
     this.state = {
