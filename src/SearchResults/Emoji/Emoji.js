@@ -39,7 +39,7 @@ class Emoji extends Component {
       <button className="Emoji" onClick={this.onClick.bind(this)} title={this.hoverText}>
         {this.state.copying && <span className="Emoji-copying">✂</span>}
         <span className="Emoji-emoji">{emoji}</span>
-        <p className="Emoji-description">{description}</p>
+        <p className="Emoji-description" title={description}>{description}</p>
         <input className="hidden" type="text" readOnly ref="input" value={emoji} />
       </button>
     );
